@@ -8,9 +8,6 @@ public class Main {
 
         //Task 1
         System.out.println("Сумма трат за месяц составила " + sumOfElements(monthlyExpenses) + " рублей");
-//        Не получилось использовать %d и %f в выводах на консоль во всех заданиях. Idea подчеркивала все выражение внутри скобок красным.
-//        Запись такая System.out.println("Сумма трат за месяц составила %d рублей", sumOfElements(monthlyExpenses));
-//        Если можно, подскажите что делаю не так (SDK - 11)
 
         //Task 2
         System.out.println("Минимальная сумма трат за день составила " + findMinimumElementInArray(monthlyExpenses) +
@@ -38,7 +35,7 @@ public class Main {
     private static int findMaximumElementInArray(int[] array) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
-            if(array[i] > array[i - 1]){
+            if(array[i] > max){
                 max = array[i];
             }
         }
@@ -48,7 +45,7 @@ public class Main {
     private static int findMinimumElementInArray(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
-            if(array[i] < array[i - 1]){
+            if(array[i] < min){
                 min = array[i];
             }
         }
